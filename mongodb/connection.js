@@ -1,5 +1,6 @@
 // Calls the mongo client and server api
 const { MongoClient, ServerApiVersion } = require('mongodb');
+require('dotenv').config();
 
 // The connection string
 const uri = process.env.URI;
@@ -12,7 +13,7 @@ const client = new MongoClient(uri, {
         strict: true,
         deprecationErrors: true,
     }
-});
+}); 
 
 // Execute the client
 async function run() {
